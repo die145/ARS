@@ -12,16 +12,14 @@ class Database:
         self.base.session.remove()
 
     # -------------------- Page --------------------------------
-    def insert_page(self, url, locations):  # location is a list of possible ad locations
+    def insert_page(self, url):
         if Page.query.get(url) is None:
             # owner of the website uses this
             self.base.session.add(Page(
                 url=url,
-                rank=1,
-                locations=json.dumps(locations),
-                avgActiveRatio=0,  # default
-                avgFocusRatio=0,  # default
-                avgVisitTime=0  # default
+                avgActiveRatio=0,
+                avgFocusRatio=0,
+                avgVisitTime=0
             ))
             self.base.session.commit()
 
@@ -30,10 +28,6 @@ class Database:
 
     def get_page(self, url):
         return self.base.session.query(Page).get(url)
-    
-    #Searches database for url that was given in the search bar
-    def get_results(self, keyword):
-        return self.base.session.query(Page).filter_by(url = keyword)
 
     # -------------------- PageVisit --------------------
     def insert_page_visit(self, url, activeRatio, focusRatio, visitTime):
