@@ -1,0 +1,50 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/ars_styles.css">
+{% endblock %}
+
+
+{% block navbar %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">ARS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('viewNews') }}">News</a></li>
+            <li class="active"><a href="{{ url_for('adminReport') }}">Admin Report</a></li>
+            <li><a href="{{ url_for('customerReport') }}">Customer Report</a></li>
+            <li><a href="{{ url_for('search') }}">Search</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<p id="header">LOGIN</p>
+
+{% for message in get_flashed_messages() %}
+<div class=flash>{{ message }}</div>
+{% endfor %}
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+    <form class="form-signin" method="POST" action="/login">
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.username) }}
+        {{ wtf.form_field(form.password) }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+</div> <!-- /container -->
+{% endblock %}
+

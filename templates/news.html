@@ -20,10 +20,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19410358-6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
         gtag('js', new Date());
 
         gtag('config', 'UA-19410358-6');
+
+
 
     </script>
 
@@ -36,6 +41,26 @@
     <script>
         riveted.init();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </head>
 
@@ -46,31 +71,7 @@
         <div class="header_area">
             <div class="logo floatleft"><a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}"
                                                          alt=""/></a></div>
-            <div class="top_menu floatleft">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Subscribe</a></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </div>
-            <div class="social_plus_search floatright">
-                <div class="social">
-                    <ul>
-                        <li><a href="#" class="twitter"></a></li>
-                        <li><a href="#" class="facebook"></a></li>
-                        <li><a href="#" class="feed"></a></li>
-                    </ul>
-                </div>
-                <div class="search">
-                    <form action="#" method="post" id="search_form">
-                        <input type="text" value="Search news" id="s"/>
-                        <input type="submit" id="searchform" value="search"/>
-                        <input type="hidden" value="post" name="post_type"/>
-                    </form>
-                </div>
-            </div>
+
         </div>
         <div class="main_menu_area">
             <ul id="nav">
@@ -291,15 +292,6 @@
             <div class="inner_footer_top"><img src="{{ url_for('static', filename='images/add3.png') }}" alt=""/></div>
         </div>
         <div class="footer_bottom_area">
-            <div class="footer_menu">
-                <ul id="f_menu">
-                    <li><a href="#">world news</a></li>
-                    <li><a href="#">sports</a></li>
-                    <li><a href="#">tech</a></li>
-                    <li><a href="#">business</a></li>
-
-                </ul>
-            </div>
             <div class="copyright_text">
                 <p>This is a Test Website</p>
                 <p>Trade marks and images used in the design are the copyright of their respective owners and are used
@@ -308,36 +300,78 @@
         </div>
     </div>
 </div>
-<div id = "validators">  <!-- You could keep inside the overallContent div -->
-		<a href="{{ url_for('index') }}"><img src="https://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/images/ars-logo-open-grey.png" alt="Valid HTML5" /></a> <br />
+<div id="validators">  <!-- You could keep inside the overallContent div -->
+    <a href="{{ url_for('index') }}"><img
+            src="https://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/images/ars-logo-open-grey.png"
+            alt="Valid HTML5"/></a> <br/>
 </div>
 <script type="text/javascript" src="{{ url_for('static', filename='js/selectnav.min.js') }}"></script>
 <script type="text/javascript">
-selectnav('nav', {
-    label: '-Navigation-',
-    nested: true,
-    indent: '-'
-});
-selectnav('f_menu', {
-    label: '-Navigation-',
-    nested: true,
-    indent: '-'
-});
-$('.bxslider').bxSlider({
-    mode: 'fade',
-    captions: true
-});
+    selectnav('nav', {
+        label: '-Navigation-',
+        nested: true,
+        indent: '-'
+    });
+    selectnav('f_menu', {
+        label: '-Navigation-',
+        nested: true,
+        indent: '-'
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
 <style>
     #validators {
-   position: fixed;
-   left: 20px;
-   top: 20px;
-   height: 100px;
-   width: 100px;
- }
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        height: 100px;
+        width: 100px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </style>
 
